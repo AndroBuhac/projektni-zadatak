@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Andro Buhac" />
+    <meta name="description" content="Prototip web stranice za projektni zadatak" />
+    <meta name="keywords" content="HTML5, CSS, responsive design, projekt" />
+    <title>Prototip Web Stranice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav {
+            background-color: #2196f3;
+            color: white;
+            padding: 1rem;
+            float: left;
+            width: 20%;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 1rem 0;
+        }
+
+        nav a {
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        main {
+            float: left;
+            width: 80%;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        #section1 {
+            animation: slideIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            margin-top: 1rem;
+        }
+
+        footer {
+            clear: both;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animacije */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive dizajn */
+        @media (max-width: 768px) {
+            nav, main {
+                float: none;
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+            nav ul {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prototip Web Stranice</h1>
+        <h2>Projektni Zadatak</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">O projektu</a></li>
+            <li><a href="https://eucenje.sum.ba/moodle/course/view.php?id=4981">Zadaca</a></li>
+            <li><a href="#section3">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <h2>O projektu</h2>
+            <p>Ovo je prototip web stranice izrađen za projektni zadatak. Cilj je prikazati osnovne elemente HTML5 i CSS-a.</p>
+            <p>Andro Buhac (2265/RR)</p>
+            <div style="text-align: center; margin-top: 1rem;">
+                <img src="slika.png" alt="Primjer slike" style="max-width: 100%; height: auto; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+            </div></div>
+        </section>
+
+        <section id="section2">
+            <h2>Tablica podataka</h2>
+            <table>
+                <thead>
+                    <tr><th>Ime</th><th>Prezime</th><th>Godine</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ivan</td><td>Ivić</td><td>25</td></tr>
+                    <tr><td>Marko</td><td>Markić</td><td>30</td></tr>
+                    <tr><td>Ana</td><td>Anić</td><td>28</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="section3">
+            <h2>Kontakt</h2>
+            <p>Autor: Andro Buhac</p>
+            <p>Email: <a href="mailto:andro.buhac@example.com">andro.buhac@fsre.sum.ba</a></p>
+            <p>Više informacija možete pronaći na <a href="https://fsre.sum.ba/" target="_blank">FSRE web stranici</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Andro Buhac. Sva prava pridržana.</p>
+        <p>
+            <a href="#section1">O projektu</a> |
+            <a href="#section2">Tablica podataka</a>
+            <a href="#section3">Kontakt</a>
+        </p>
+    </footer>
+</body>
+</html>
